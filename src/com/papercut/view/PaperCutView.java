@@ -15,7 +15,7 @@ public class PaperCutView
 	private List<PaperCutViewBean> beanList = new ArrayList<PaperCutViewBean>();
 	PaperCutController controller= new PaperCutController();
 	
-	public double processInputFile(String path) throws Exception
+	public String processInputFile(String path) throws Exception
 	{
 		this.beanList=PaperCutUtil.readInputFile(path);
 		this.beanList = controller.processInputData(this.beanList);
@@ -26,7 +26,7 @@ public class PaperCutView
 			grandTotal+=bean.getTotalCost();
 		}
 		System.out.println("Grand Total: "+ PaperCutUtil.formatAmount(grandTotal));
-		return grandTotal;
+		return PaperCutUtil.formatAmount(grandTotal);
 	}
 	
 	public static void main(String[] args) 
@@ -35,7 +35,7 @@ public class PaperCutView
 		PaperCutView view=new PaperCutView();
 		try
 		{
-			view.processInputFile("C://Users//tejas//Downloads//sample.csv");
+			view.processInputFile(".//testcases//test3.csv");
 		}
 		catch (Exception e)
 		{
