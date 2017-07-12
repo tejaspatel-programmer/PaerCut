@@ -6,6 +6,11 @@ import com.papercut.model.PaperCutModel;
 import com.papercut.model.PaperCutModelImpl;
 import com.papercut.view.PaperCutViewBean;
 
+/**
+ * This a controller class, which takes input from views and pass it to Model for Processing.
+ * @author tejas
+ *
+ */
 public class PaperCutController 
 {
 

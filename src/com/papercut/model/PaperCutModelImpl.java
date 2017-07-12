@@ -2,7 +2,11 @@ package com.papercut.model;
 
 import java.lang.reflect.Field;
 
-
+/**
+ * This class contains Model implementation part
+ * @author tejas
+ *
+ */
 public class PaperCutModelImpl implements PaperCutModel
 {
 
@@ -20,6 +24,12 @@ public class PaperCutModelImpl implements PaperCutModel
 		return totalCost;
 	}
 
+	/**
+	 * This method returns price based on paper size. It fetches the price value from constant class. 
+	 * @param fieldName
+	 * @return
+	 * @throws Exception
+	 */
 	private double getPrice(String fieldName) throws Exception
 	{
 		Class<?> myInterfaceClass = PaperCutModelConstant.class;

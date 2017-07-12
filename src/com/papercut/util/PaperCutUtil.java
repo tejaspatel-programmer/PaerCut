@@ -10,6 +10,12 @@ import com.papercut.view.PaperCutViewBean;
 
 public class PaperCutUtil {
 
+	/**
+	 * This method takes fully qualified path of input file and stored data in PaperCutViewBean to process.
+	 * @param filePath
+	 * @return
+	 * @throws Exception
+	 */
 	public static List<PaperCutViewBean> readInputFile(String filePath) throws Exception 
 	{
 		List<PaperCutViewBean> beanList = new ArrayList<PaperCutViewBean>();
@@ -31,7 +37,11 @@ public class PaperCutUtil {
 		br.close();
 		return beanList;
 	}
-	
+	/**
+	 * This Method format Amount and returns amount in String. 
+	 * @param totalCost
+	 * @return String
+	 */
 	public static String formatAmount(double totalCost)
 	{
 		String total="";
